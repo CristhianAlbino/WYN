@@ -1,0 +1,144 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 80px;
+    background-color: #000;
+}
+
+.logo h1 {
+    font-size: 28px;
+    color: #fff;
+}
+
+.logo p {
+    font-size: 14px;
+    color: #fff;
+    margin-top: -5px;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    margin-left: 30px;
+    font-size: 16px;
+}
+
+nav .enter {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+main {
+    padding: 50px 80px;
+}
+
+.intro h2 {
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    text-decoration: underline;
+    text-decoration-color: #00aaff;
+}
+
+.intro p {
+    font-size: 18px;
+    color: #777;
+    margin-bottom: 20px;
+}
+
+.install-btn {
+    padding: 10px 30px;
+    background-color: #FF6F00;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.search-bar {
+    margin: 40px auto;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    gap: 10px;
+}
+
+.search-bar input {
+    width: 400px;
+    padding: 12px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.filter-btn {
+    padding: 12px 20px;
+    background-color: #FF6F00;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.services {
+    display: flex;
+    justify-content: left;
+    padding: 20px 0;
+    gap: 20px;
+}
+
+.service-box {
+    background-color: #fff;
+    padding: 20px;
+    width: 170px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.cards-container {
+    margin-top: 50px;
+}
+
+.owl-carousel .owl-nav {
+    display: none;
+}
+
+.owl-carousel .owl-dots {
+    text-align: center;
+    margin-top: 15px;
+}
+
+.owl-dots span {
+    height: 10px;
+    width: 10px;
+    background-color: #fff;
+    border: 2px solid #01b0f8;
+    border-radius: 50%;
+    margin: 0 5px;
+    display: inline-block;
+}
+
+.owl-dots .active span {
+    background-color: #01b0f8;
+    width: 12px;
+    height: 12px;
+}

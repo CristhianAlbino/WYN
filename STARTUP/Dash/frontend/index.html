@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WYN Dashboard</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="container">
+        <aside class="sidebar">
+            <div class="logo">
+                <h1>WYN</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li onclick="showDashboard()"><i class="fas fa-chart-line"></i> Dashboard</li>
+                    <li onclick="showAddService()"><i class="fas fa-plus-circle"></i> Adicionar Serviço</li>
+                    <li onclick="showChat()"><i class="fas fa-comments"></i> Chat e Mensagens</li>
+                    <li onclick="showEditService()"><i class="fas fa-edit"></i> Editar Serviços</li>
+                    <li onclick="showConfig()"><i class="fas fa-cog"></i> Configurações</li>
+                </ul>
+            </nav>
+        </aside>
+        
+        <main class="content">
+            <header class="header">
+                <h2>Dashboard</h2>
+            </header>
+
+            <!-- Dashboard Section -->
+            <section id="dashboard-section">
+                <section class="stats-overview">
+                    <div class="stat-item">
+                        <p>Horas Registradas</p>
+                        <h3>2,000 horas <span>(-28%)</span></h3>
+                    </div>
+                    <div class="stat-item">
+                        <p>Seleção de Serviços</p>
+                        <h3>Elétrico e Manutenção: 70% <br> Outros Serviços: 30%</h3>
+                    </div>
+                    <div class="stat-item">
+                        <p>Impressões na Plataforma</p>
+                        <h3>532 <span>(Aumento 5%)</span></h3>
+                    </div>
+                </section>
+
+                <section class="charts-section">
+                    <div class="chart-container">
+                        <canvas id="servicesChart"></canvas>
+                    </div>
+                    <div class="chart-container">
+                        <canvas id="satisfactionChart"></canvas>
+                    </div>
+                </section>
+            </section>
+
+            <!-- Adicionar Serviço -->
+            <section id="add-service-section" class="service-section hidden">
+                <h3>Adicionar Serviço</h3>
+                <input type="text" id="serviceName" placeholder="Nome do Serviço">
+                <input type="text" id="serviceCategory" placeholder="Categoria">
+                <input type="text" id="serviceDescription" placeholder="Descrição">
+                <input type="number" id="servicePrice" placeholder="Preço Médio">
+                <button onclick="addService()">Adicionar Serviço</button>
+                <div id="servicesList"></div>
+            </section>
+            <div id="update-graphs-section">
+                <h2>Atualizar Dados dos Gráficos</h2>
+                
+                <div id="update-graphs-section">
+                    <h2>Atualizar Dados dos Gráficos</h2>
+                    
+                    <!-- Atualizar gráfico de satisfação -->
+                    <div>
+                        <h3>Atualizar Satisfação do Cliente</h3>
+                        <label for="promoters">Promotores (%):</label>
+                        <input type="number" id="promoters" value="28"><br>
+                        
+                        <label for="neutral">Neutros (%):</label>
+                        <input type="number" id="neutral" value="50"><br>
+                        
+                        <label for="detractors">Detratores (%):</label>
+                        <input type="number" id="detractors" value="10"><br>
+                        
+                        <button onclick="updateSatisfactionChart()">Atualizar Gráfico de Satisfação</button>
+                    </div>
+                
+                    <!-- Atualizar gráfico de progresso de serviços -->
+                    <div>
+                        <h3>Atualizar Serviços</h3>
+                        <label for="totalServices">Total de Serviços:</label>
+                        <input type="number" id="totalServices" value="100"><br>
+                        
+                        <label for="completedServices">Serviços Concluídos:</label>
+                        <input type="number" id="completedServices" value="68"><br>
+                        
+                        <button onclick="updateServicesChart()">Atualizar Gráfico de Serviços</button>
+                    </div>
+                </div>
+                
+            
+
+            <!-- Chat e Mensagens -->
+            <section id="chat-section" class="chat-section hidden">
+                <h3>Mensagens dos Clientes</h3>
+                <div id="chat-box"></div>
+                <input type="text" id="messageInput" placeholder="Digite sua mensagem">
+                <button onclick="sendMessage()">Enviar</button>
+            </section>
+
+            <!-- Editar Serviços -->
+            <section id="edit-service-section" class="service-section hidden">
+                <h3>Editar Serviços</h3>
+                <div id="editServiceList"></div>
+            </section>
+
+            <!-- Configurações -->
+            <section id="config-section" class="service-section hidden">
+                <h3>Configurações do Perfil</h3>
+                <input type="text" id="username" placeholder="Nome de Usuário">
+                <input type="email" id="email" placeholder="Email">
+                <input type="password" id="password" placeholder="Senha">
+                <button onclick="saveSettings()">Salvar Configurações</button>
+            </section>
+        </main>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>

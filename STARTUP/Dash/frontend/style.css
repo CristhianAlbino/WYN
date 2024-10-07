@@ -1,0 +1,258 @@
+/* Body Styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #181818;
+    color: white;
+}
+
+/* Sidebar Styles */
+.sidebar {
+    width: 250px;
+    background-color: #111;
+    height: 100vh;
+    padding-top: 20px;
+    position: fixed;
+}
+
+.logo {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.logo h1 {
+    color: orange;
+}
+
+nav ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+nav ul li {
+    padding: 15px;
+    font-size: 18px;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+nav ul li i {
+    margin-right: 10px;
+}
+
+nav ul li:hover, .active {
+    background-color: orange;
+}
+
+/* Content Section */
+.content {
+    margin-left: 250px;
+    padding: 20px;
+}
+
+.header h2 {
+    font-size: 36px;
+    color: white;
+}
+
+/* Statistics Section */
+.stats-overview {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.stat-item {
+    background-color: #222;
+    padding: 20px;
+    border-radius: 8px;
+    width: 30%;
+    text-align: center;
+}
+
+.stat-item p {
+    color: #ccc;
+}
+
+.stat-item h3 {
+    font-size: 24px;
+    color: orange;
+}
+
+.stat-item h3 span {
+    color: red;
+    font-size: 16px;
+}
+
+/* Charts Section */
+.charts-section {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+
+.chart-container {
+    background-color: #222;
+    padding: 20px;
+    border-radius: 8px;
+    width: 48%;
+}
+
+/* Form Section for Service */
+.service-section {
+    background-color: #222;
+    padding: 20px;
+    border-radius: 8px;
+    margin-top: 20px;
+}
+
+.service-section input {
+    margin-right: 10px;
+    padding: 10px;
+    border-radius: 4px;
+    border: none;
+}
+
+.service-section button {
+    padding: 10px;
+    background-color: orange;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.service-section button:hover {
+    background-color: #ff6347;
+}
+
+/* Chat Section */
+.chat-section {
+    background-color: #222;
+    padding: 20px;
+    border-radius: 8px;
+    margin-top: 20px;
+}
+
+#chat-box {
+    background-color: #333;
+    height: 200px;
+    overflow-y: auto;
+    margin-bottom: 10px;
+}
+
+#messageInput {
+    padding: 10px;
+    border-radius: 4px;
+    border: none;
+}
+
+#chat-section button {
+    padding: 10px;
+    background-color: orange;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* Hidden Sections */
+.hidden {
+    display: none;
+}
+/* Estilo da seção de atualização dos gráficos */
+#update-graphs-section {
+    margin: 20px;
+    padding: 20px;
+    background-color: #1c1c1c;
+    border-radius: 10px;
+    color: white;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+#update-graphs-section h2, h3 {
+    color: #ffa500;
+    font-family: 'Arial', sans-serif;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+/* Estilo para inputs */
+#update-graphs-section label {
+    font-family: 'Arial', sans-serif;
+    font-size: 14px;
+    color: #cccccc;
+    margin-right: 10px;
+}
+
+#update-graphs-section input {
+    background-color: #2b2b2b;
+    border: 1px solid #444;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 10px;
+    color: white;
+    font-family: 'Arial', sans-serif;
+    width: 200px;
+}
+
+#update-graphs-section input[type="number"] {
+    -moz-appearance: textfield; /* Remove flechas dos números */
+}
+
+#update-graphs-section input[type="number"]::-webkit-outer-spin-button,
+#update-graphs-section input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
+/* Estilo dos botões */
+#update-graphs-section button {
+    background-color: #ffa500;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 10px;
+}
+
+#update-graphs-section button:hover {
+    background-color: #e69500;
+}
+
+/* Layout flex para inputs e botões */
+#update-graphs-section div {
+    margin-bottom: 20px;
+}
+
+#update-graphs-section input, #update-graphs-section label {
+    display: inline-block;
+}
+
+#update-graphs-section button {
+    display: block;
+    width: 200px;
+}
+
+/* Centralizar texto de feedback */
+#update-graphs-section .feedback {
+    margin-top: 20px;
+    color: #32CD32;
+    font-family: 'Arial', sans-serif;
+    font-weight: bold;
+}
+
+/* Ajustar margens e espaçamento */
+#update-graphs-section h3 {
+    margin-top: 30px;
+    font-size: 16px;
+}
+
